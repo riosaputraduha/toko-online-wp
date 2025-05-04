@@ -18,6 +18,16 @@ class CustomerController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
+    public function index()
+    {
+        $customer = Customer::orderBy('id', 'desc')->get();
+        return view('backend.v_customer.index', [
+            'judul' => 'Customer',
+            'sub' => 'Halaman Customer',
+            'index' => $customer
+        ]);
+    }
+
     // Callback dari Google
     public function callback()
     {

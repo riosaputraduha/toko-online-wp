@@ -29,6 +29,9 @@ Route::resource('backend/user', UserController::class, ['as' => 'backend'])->mid
 Route::get('backend/laporan/formuser', [UserController::class, 'formUser'])->name('backend.laporan.formuser')->middleware('auth');
 Route::post('backend/laporan/cetakuser', [UserController::class, 'cetakUser'])->name('backend.laporan.cetakuser')->middleware('auth');
 
+// Route Customer
+Route::resource('backend/customer', CustomerController::class, ['as' => 'backend'])->middleware('auth');
+
 // Route Kategori
 Route::resource('backend/kategori', KategoriController::class, ['as' => 'backend'])->middleware('auth');
 
