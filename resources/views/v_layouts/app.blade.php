@@ -126,6 +126,7 @@
                         <!-- / Mobile nav toggle -->
                     </ul>
                 </div>
+                @endif
             </div>
             <!-- header -->
         </div>
