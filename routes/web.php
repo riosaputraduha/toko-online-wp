@@ -45,5 +45,5 @@ Route::post('backend/laporan/cetakproduk', [ProdukController::class, 'cetakProdu
 //API Google
 Route::get('/auth/redirect', [CustomerController::class, 'redirect'])->name('auth.redirect');
 Route::get('/auth/google/callback', [CustomerController::class, 'callback'])->name('auth.callback');
-// Logout
-Route::post('/logout', [CustomerController::class, 'logout'])->name('logout');
+// Logout Customer
+Route::post('/customer/logout', [CustomerController::class, 'logout'])->name('customer.logout');
